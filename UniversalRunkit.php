@@ -16,24 +16,26 @@ class UniversalRunkit extends Client {
     }
 
     public function doRequest($request) {
-        $sandbox = new \Runkit_Sandbox();
-        $sandbox->_COOKIE = $request->getCookies();
-        $sandbox->_SERVER = $request->getServer();
-        $sandbox->_FILES = $this->remapFiles($request->getFiles());
-
         $uri = str_replace('http://localhost', '', $request->getUri());
 
+        $sandbox = new \Runkit_Sandbox();
+        $sandbox->_COOKIE = $request->getCookies();
+        $sandbox->_FILES = $this->remapFiles($request->getFiles());
+        $sandbox->_SERVER = array_merge([
+            'REQUEST_METHOD' => strtoupper($request->getMethod()),
+            'REQUEST_URI' => $uri,
+            'argv' => ['index.php', $uri],
+            'PHP_SELF' => 'index.php',
+            'SERVER_NAME' => 'localhost',
+            'SCRIPT_NAME' => 'index.php'
+        ], $request->getServer());
         $sandbox->_REQUEST = $this->remapRequestParameters($request->getParameters());
+
         if (strtoupper($request->getMethod()) == 'GET') {
             $sandbox->_GET = $sandbox->_REQUEST;
         } else {
             $sandbox->_POST = $sandbox->_REQUEST;
         }
-
-        $sandbox->eval('$_SERVER["REQUEST_METHOD"] = "' . strtoupper($request->getMethod()) . '";');
-        $sandbox->eval('$_SERVER["REQUEST_URI"] = "' . $uri . '";');
-        $sandbox->eval('$_SERVER["argv"] = ["index.php", "' . $uri . '"];');
-        $sandbox->eval('$_SERVER["PHP_SELF"] = "index.php";');
 
         $sandbox->define('STDIN', true);
 
