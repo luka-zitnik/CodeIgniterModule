@@ -5,12 +5,18 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 ## Available methods
 
 * amOnPage
+* see
+* seeInTitle
 * sendAjaxGetRequest
 * sendAjaxPostRequest
 
 ### Additional methods available by use of the REST module
 
+* grabResponse
 * seeResponseContains
+* seeResponseContainsJson
+* seeResponseIsJson
+* seeResponseJsonMatchesJsonPath
 
 ## Install
 
