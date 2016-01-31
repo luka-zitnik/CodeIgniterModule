@@ -8,5 +8,10 @@
             "email": "luka.zitnik@gmail.com"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Codeception\\Module\\": ".",
+            "Codeception\\Lib\\Connector\\": "."
+        }
+    }
 }
