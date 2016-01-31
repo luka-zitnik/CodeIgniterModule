@@ -20,8 +20,6 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 
 ## Install
 
-### With Composer
-
 Add
 ```json
 {
@@ -35,8 +33,6 @@ Then run
 ```shell
 composer require --dev luka-zitnik/code-igniter-module:*@dev
 ```
-
-### Manually
 
 ## Configure
 
