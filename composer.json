@@ -1,0 +1,12 @@
+{
+    "name": "luka-zitnik/code-igniter-module",
+    "description": "Adds support for functional tests of CodeIgniter applications in Codeception",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luka Zitnik",
+            "email": "luka.zitnik@gmail.com"
+        }
+    ],
+    "require": {}
+}
