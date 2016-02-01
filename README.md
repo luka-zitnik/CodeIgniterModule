@@ -20,6 +20,8 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 
 ## Install
 
+Make sure your Codeception is up-to-date.
+
 Add
 ```json
 {
