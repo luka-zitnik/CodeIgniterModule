@@ -8,6 +8,10 @@
             "email": "luka.zitnik@gmail.com"
         }
     ],
+    "require": {
+        "php": ">=5.4.0",
+        "ext-runkit": "*"
+    },
     "autoload": {
         "psr-4": {
             "Codeception\\Module\\": ".",
