@@ -46,7 +46,7 @@ class UniversalRunkit extends Client {
         ob_end_clean();
 
         $headers = [];
-        $php_headers = headers_list();
+        $php_headers = $sandbox->headers_list();
         foreach ($php_headers as $value) {
             // Get the header name
             $parts = explode(':', $value);
