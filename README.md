@@ -5,16 +5,20 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 ## Available methods
 
 * amOnPage
+* see
+* seeInTitle
 * sendAjaxGetRequest
 * sendAjaxPostRequest
 
 ### Additional methods available by use of the REST module
 
+* grabResponse
 * seeResponseContains
+* seeResponseContainsJson
+* seeResponseIsJson
+* seeResponseJsonMatchesJsonPath
 
 ## Install
-
-### With Composer
 
 Add
 ```json
@@ -29,8 +33,6 @@ Then run
 ```shell
 composer require --dev luka-zitnik/code-igniter-module:*@dev
 ```
-
-### Manually
 
 ## Configure
 
