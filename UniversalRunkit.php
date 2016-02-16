@@ -58,7 +58,13 @@ class UniversalRunkit extends Client {
         }
         $headers['Content-type'] = isset($headers['Content-type']) ? $headers['Content-type'] : "text/html; charset=UTF-8";
 
-        $response = new Response($content, 200, $headers);
+        $response_code = $sandbox->http_response_code();
+        if ($response_code === false) {
+            // It wasn't set, so it's default
+            $response_code = 200;
+        }
+
+        $response = new Response($content, $response_code, $headers);
         return $response;
     }
 
