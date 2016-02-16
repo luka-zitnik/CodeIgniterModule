@@ -4,17 +4,41 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 
 ## Available methods
 
+* amHttpAuthenticated
 * amOnPage
+* click
+* dontSee
+* dontSeeElement
+* dontSeeInSource
+* dontSeeInTitle
+* dontSeeLink
+* dontSeeCurrentUrlEquals
+* dontSeeCurrentUrlMatches
+* dontSeeInCurrentUrl
+* grabAttributeFrom
+* grabFromCurrentUrl
+* grabMultiple
+* grabTextFrom
 * see
+* seeCurrentUrlEquals
+* seeCurrentUrlMatches
+* seeElement
+* seeInCurrentUrl
+* seeInSource
 * seeInTitle
+* seeLink
+* seeNumberOfElements
 * sendAjaxGetRequest
 * sendAjaxPostRequest
+* sendAjaxRequest
 
 ### Additional methods available by use of the REST module
 
 * grabResponse
+* seeResponseCodeIs
 * seeResponseContains
 * seeResponseContainsJson
+* seeResponseEquals
 * seeResponseIsJson
 * seeResponseJsonMatchesJsonPath
 
