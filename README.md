@@ -6,20 +6,27 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 
 * amHttpAuthenticated
 * amOnPage
+* attachFile
+* checkOption
 * click
 * dontSee
+* dontSeeCheckboxIsChecked
+* dontSeeCurrentUrlEquals
+* dontSeeCurrentUrlMatches
 * dontSeeElement
+* dontSeeInCurrentUrl
+* dontSeeInField
 * dontSeeInSource
 * dontSeeInTitle
 * dontSeeLink
-* dontSeeCurrentUrlEquals
-* dontSeeCurrentUrlMatches
-* dontSeeInCurrentUrl
-* grabAttributeFrom
+* dontSeeOptionIsSelected
+* fillField
+* grabAttributeFrom (caveat: html needs to look like xml)
 * grabFromCurrentUrl
 * grabMultiple
 * grabTextFrom
 * see
+* seeCheckboxIsChecked (caveat: name or label text won't work as locators)
 * seeCurrentUrlEquals
 * seeCurrentUrlMatches
 * seeElement
@@ -28,6 +35,9 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 * seeInTitle
 * seeLink
 * seeNumberOfElements
+* seeOptionIsSelected
+* seeResponseCodeIs
+* selectOption (caveat: value has to be set explicitely)
 * sendAjaxGetRequest
 * sendAjaxPostRequest
 * sendAjaxRequest
