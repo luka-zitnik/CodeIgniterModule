@@ -11,6 +11,7 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 * click
 * dontSee
 * dontSeeCheckboxIsChecked
+* dontSeeCookie
 * dontSeeCurrentUrlEquals
 * dontSeeCurrentUrlMatches
 * dontSeeElement
@@ -22,11 +23,14 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 * dontSeeOptionIsSelected
 * fillField
 * grabAttributeFrom (caveat: html needs to look like xml)
+* grabCookie
 * grabFromCurrentUrl
 * grabMultiple
 * grabTextFrom
+* resetCookie
 * see
 * seeCheckboxIsChecked (caveat: name or label text won't work as locators)
+* seeCookie
 * seeCurrentUrlEquals
 * seeCurrentUrlMatches
 * seeElement
@@ -41,6 +45,8 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 * sendAjaxGetRequest
 * sendAjaxPostRequest
 * sendAjaxRequest
+* setCookie
+* uncheckOption
 
 ### Additional methods available by use of the REST module
 
