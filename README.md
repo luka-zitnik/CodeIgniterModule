@@ -27,6 +27,7 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 * grabFromCurrentUrl
 * grabMultiple
 * grabTextFrom
+* moveBack
 * resetCookie
 * see
 * seeCheckboxIsChecked (caveat: name or label text won't work as locators)
@@ -40,12 +41,15 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 * seeLink
 * seeNumberOfElements
 * seeOptionIsSelected
+* seePageNotFound (caveat: CIs show_404 won't work)
 * seeResponseCodeIs
 * selectOption (caveat: value has to be set explicitely)
 * sendAjaxGetRequest
 * sendAjaxPostRequest
 * sendAjaxRequest
 * setCookie
+* submitForm
+* switchToIframe
 * uncheckOption
 
 ### Additional methods available by use of the REST module
