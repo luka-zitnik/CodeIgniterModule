@@ -17,5 +17,9 @@
             "Codeception\\Module\\": ".",
             "Codeception\\Lib\\Connector\\": "."
         }
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.2",
+        "codeigniter/framework": "^3.1"
     }
 }
