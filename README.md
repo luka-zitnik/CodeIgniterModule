@@ -43,7 +43,7 @@ Codeception module that adds support for Codeception's functional tests of CodeI
 * seeOptionIsSelected
 * seePageNotFound (caveat: CIs show_404 won't work)
 * seeResponseCodeIs
-* selectOption (caveat: value has to be set explicitely)
+* selectOption (caveat: value has to be set explicitly)
 * sendAjaxGetRequest
 * sendAjaxPostRequest
 * sendAjaxRequest
