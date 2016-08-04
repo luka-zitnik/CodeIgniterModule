@@ -8,4 +8,8 @@ class_name: FunctionalTester
 modules:
     enabled:
         # add framework module here
-        - \Helper\Functional
+        - CodeIgniter:
+            index: tests/_data/app/public/index.php
+        - REST:
+            depends: CodeIgniter
+        - Asserts

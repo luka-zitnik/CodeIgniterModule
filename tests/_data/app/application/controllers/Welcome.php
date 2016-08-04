@@ -22,4 +22,13 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+
+	public function user_guide() {
+		echo 'This fixes a broken link in the index page.';
+	}
+
+	public function show_404() {
+		header("HTTP/1.0 404 Not Found");
+	}
+
 }
