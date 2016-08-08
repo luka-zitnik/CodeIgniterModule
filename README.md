@@ -1,70 +1,10 @@
 # CodeIgniter Module
 
-Codeception module that adds support for Codeception's functional tests of CodeIgniter applications
+[![Build Status](https://travis-ci.org/luka-zitnik/CodeIgniterModule.svg?branch=master)](https://travis-ci.org/luka-zitnik/CodeIgniterModule)
 
-## Available methods
-
-* amHttpAuthenticated
-* amOnPage
-* attachFile
-* checkOption
-* click
-* dontSee
-* dontSeeCheckboxIsChecked
-* dontSeeCookie
-* dontSeeCurrentUrlEquals
-* dontSeeCurrentUrlMatches
-* dontSeeElement
-* dontSeeInCurrentUrl
-* dontSeeInField
-* dontSeeInSource
-* dontSeeInTitle
-* dontSeeLink
-* dontSeeOptionIsSelected
-* fillField
-* grabAttributeFrom (caveat: html needs to look like xml)
-* grabCookie
-* grabFromCurrentUrl
-* grabMultiple
-* grabTextFrom
-* moveBack
-* resetCookie
-* see
-* seeCheckboxIsChecked (caveat: name or label text won't work as locators)
-* seeCookie
-* seeCurrentUrlEquals
-* seeCurrentUrlMatches
-* seeElement
-* seeInCurrentUrl
-* seeInSource
-* seeInTitle
-* seeLink
-* seeNumberOfElements
-* seeOptionIsSelected
-* seePageNotFound (caveat: CIs show_404 won't work)
-* seeResponseCodeIs
-* selectOption (caveat: value has to be set explicitly)
-* sendAjaxGetRequest
-* sendAjaxPostRequest
-* sendAjaxRequest
-* setCookie
-* submitForm
-* switchToIframe
-* uncheckOption
-
-### Additional methods available by use of the REST module
-
-* grabResponse
-* seeResponseCodeIs
-* seeResponseContains
-* seeResponseContainsJson
-* seeResponseEquals
-* seeResponseIsJson
-* seeResponseJsonMatchesJsonPath
+This is a Codeception module that enables you to make Codeception's functional tests for CodeIgniter applications.
 
 ## Install
-
-Make sure your Codeception is up-to-date.
 
 Add
 ```json
@@ -77,7 +17,7 @@ to the repositories list in your composer.json file.
 
 Then run
 ```shell
-composer require --dev luka-zitnik/code-igniter-module:*@dev
+composer require --dev luka-zitnik/code-igniter-module
 ```
 
 ## Configure
