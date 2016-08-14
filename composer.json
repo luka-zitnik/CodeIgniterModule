@@ -14,8 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Codeception\\Module\\": ".",
-            "Codeception\\Lib\\Connector\\": "."
+            "Codeception\\Module\\": "src/",
+            "Codeception\\Lib\\Connector\\": "src/"
         }
     },
     "require-dev": {
