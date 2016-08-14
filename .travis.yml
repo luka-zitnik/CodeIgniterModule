@@ -3,4 +3,4 @@ php: '5.5'
 install:
     - pecl install runkit
     - composer install
-script: php vendor/codeception/codeception/codecept run
+script: php vendor/codeception/codeception/codecept run --debug
