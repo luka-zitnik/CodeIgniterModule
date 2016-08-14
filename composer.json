@@ -1,6 +1,6 @@
 {
     "name": "luka-zitnik/code-igniter-module",
-    "description": "Adds support for functional tests of CodeIgniter applications in Codeception",
+    "description": "Make Codeception's functional tests for CodeIgniter applications",
     "license": "MIT",
     "authors": [
         {
