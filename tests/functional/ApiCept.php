@@ -1,6 +1,6 @@
 <?php 
 $I = new FunctionalTester($scenario);
-$I->wantTo('perform actions and see result');
+$I->wantTo('test integration with REST module');
 
 $I->sendAjaxGetRequest('/api/get', ['parameter' => 123]);
 $I->seeResponseContains("123");
