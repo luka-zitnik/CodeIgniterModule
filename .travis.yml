@@ -3,4 +3,5 @@ php: '5.5'
 install:
     - pecl install runkit
     - composer install
+before_script: echo 'session.save_path = "/tmp"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
 script: php vendor/codeception/codeception/codecept run --debug
