@@ -28,13 +28,12 @@ class UniversalRunkit extends Client {
         $sandbox = new \Runkit_Sandbox();
         $sandbox->_COOKIE = $request->getCookies();
         $sandbox->_FILES = $this->remapFiles($request->getFiles());
-        $sandbox->_SERVER = array_merge([
-            'REQUEST_METHOD' => $method,
-            'REQUEST_URI' => "$uri?" . $this->requestParametersToQueryString($parameters),
-            'PHP_SELF' => 'index.php',
-            'SERVER_NAME' => 'localhost',
-            'SCRIPT_NAME' => 'index.php'
-        ], $request->getServer());
+        $sandbox->eval('$_SERVER = unserialize(\'' . serialize(array_merge([
+                    'REQUEST_METHOD' => $method,
+                    'REQUEST_URI' => "$uri?" . $this->requestParametersToQueryString($parameters),
+                    'PHP_SELF' => 'index.php',
+                    'SERVER_NAME' => 'localhost',
+                    'SCRIPT_NAME' => 'index.php'], $request->getServer())) . '\');');
         $sandbox->_REQUEST = $this->remapRequestParameters($parameters);
 
         if ($method == 'GET') {
