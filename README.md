@@ -24,3 +24,11 @@ modules:
         - CodeIgniter:
             index: public/index.php
 ```
+
+## Caveat
+
+You will not be able to test execution paths that terminate with an `exit` statement
+using this module. More informingly, the separate thread that your AUT will run
+in will close without leaving you the opportunity to collect output or response
+header. If you need this fixed or if you just want to talk about it, drop me a
+line.
