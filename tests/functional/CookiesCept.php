@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 $I = new FunctionalTester($scenario);
 $I->wantTo('perform actions and see result');
 
@@ -17,3 +18,7 @@ $I->assertNotEquals($cookie, $I->grabCookie('PHPSESSID'));
 $I->setCookie('background-color', 'red');
 $I->amOnPage('/cookies');
 $I->assertEquals('red', $I->grabCookie('background-color'));
+
+$I->amOnPage('/cookies/multipleCookies');
+$I->seeCookie('cookie_1');
+$I->seeCookie('cookie_2');

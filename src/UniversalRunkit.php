@@ -61,7 +61,7 @@ class UniversalRunkit extends Client {
                 $parts = explode(':', $value);
                 if (count($parts) > 1) {
                     $name = trim(array_shift($parts));
-                    // Build the header hash map
+                    // Build the header hash map and handle multiple headers with same name
                     $headers[$name][] = trim(implode(':', $parts));
                 }
             }
